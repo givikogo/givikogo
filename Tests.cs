@@ -7,8 +7,9 @@ public class Program
     {
         //Test2();
         //Test3();
-        //Test4();
+    
         //Test6();
+        //Test7();
         //Test8();
         //Test9();
         //Test10();
@@ -95,9 +96,27 @@ Have a nice day!!";
              }
         if(a==b) WriteLine("1st number is :" + a);
              }
+    
+////////////////////////////////////////
+ public static void Test7(){
+        Kvdr(3,2);
+    }
+    
+    public static void Kvdr(int a,int b)
+    {
+    int ans=a;
+        for(int k=1; k<b; k++){
+        ans=ans*a;
+                
+        }
+        WriteLine(ans);
+}
+
+
     /////////////////////////
+
              public static void Test8(){
-    Fibo(5);
+    Fibo(7);
         
     }
     public static int Fibo(int a)
