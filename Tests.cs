@@ -11,9 +11,9 @@ public class Programm
 
         ReadLine();
     }
-    public static string F(int k)
+    public static string F(int n)
     {
-        int sum = k;
+        int sum = n;
 
         string orobiti = "";
 
@@ -39,8 +39,8 @@ public class Programm
 
 
         int Nullpluss = 0;
-        int HowNullcnt = k;
-        for (int j = 0; j <= orobiti.Length; j++)
+        int HowNullcnt = n;
+        for (int k = 0; k <= orobiti.Length; k++)
         {
 
             Nullpluss = HowNullcnt - orobiti.Length;
@@ -53,11 +53,11 @@ public class Programm
             }
 
         }
-
+ ///დაბრუნებს a-ს რომელსაც ორობით წარმოდგენაში, k-აურ ადგილზე ექნება 1-იანი დანარჩენი ყველა 0-ები
         string a = "";
         a += "1";
 
-        for (int i = 1; i < k + 1; i++)
+        for (int k = 1; k < n + 1; k++)
         {
             a += "0";
         }
@@ -68,9 +68,8 @@ public class Programm
     {
         int sum = mosalodneli_atobitshi;
 
-        string Mosalodneli_orobitishi = "";
-
-
+        string mosalodneli_orobitishi = "";
+           
         while (sum >= 1)
         {
 
@@ -78,19 +77,19 @@ public class Programm
             {
 
                 sum = sum / 2;
-                Mosalodneli_orobitishi = "0" + Mosalodneli_orobitishi;
+                mosalodneli_orobitishi = "0" + mosalodneli_orobitishi;
 
             }
             else
             {
 
                 sum = sum / 2;
-                Mosalodneli_orobitishi = "1" + Mosalodneli_orobitishi;
+                mosalodneli_orobitishi = "1" + mosalodneli_orobitishi;
 
             }
+        }
         
-        
-        if (Mosalodneli_orobitishi == pasuxi_orobitshi)
+        if (mosalodneli_orobitishi == pasuxi_orobitshi)
         {
             WriteLine("true");
         }
@@ -101,6 +100,11 @@ public class Programm
         
     }
 }
+
+
+
+      
+      
 
 
 
