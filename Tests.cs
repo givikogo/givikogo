@@ -4,18 +4,19 @@ public class Programm
 {
     public static void Main()
     {
-        WriteLine(F(1, 0));
-        WriteLine(F(4, 2));
-        WriteLine(F(8, 3));
+
+        Assert_AreEqual(1, F(0));
+        Assert_AreEqual(4, F(2));
+        Assert_AreEqual(8, F(3));
 
         ReadLine();
     }
-    public static bool F(int x,int k)
+    public static string F(int k)
     {
         int sum = k;
-        int sum2 = x;
+
         string orobiti = "";
-        string orobitiX = "";
+
 
         while (sum >= 1)
         {
@@ -24,7 +25,7 @@ public class Programm
             {
 
                 sum = sum / 2;
-                orobiti = "0"+orobiti;
+                orobiti = "0" + orobiti;
 
             }
             else
@@ -36,55 +37,76 @@ public class Programm
             }
         }
 
-        while (sum2 >= 1)
-        { 
-           
-            if (sum2 % 2 == 0)
-            {
-
-                sum2 = sum2 / 2;
-                orobitiX = "0" + orobitiX;
-
-            }
-
-            else
-           {
-
-                sum2 = sum2 / 2;
-                orobitiX = "1" + orobitiX;
-
-            }
-        }
-
 
         int Nullpluss = 0;
         int HowNullcnt = k;
         for (int j = 0; j <= orobiti.Length; j++)
         {
 
-            Nullpluss = HowNullcnt-orobiti.Length;
-            
-            if(Nullpluss >= 0)
+            Nullpluss = HowNullcnt - orobiti.Length;
+
+            if (Nullpluss >= 0)
             {
-                
-                orobiti = orobiti+"0";
+
+                orobiti = orobiti + "0";
 
             }
-       
+
         }
-       
-        bool ans;
-        bool a = true, b = false;
-        if (orobitiX.Length == orobiti.Length)
+
+        string a = "";
+        a += "1";
+
+        for (int i = 1; i < k + 1; i++)
+        {
+            a += "0";
+        }
+
+        return a;
+    }
+    public static void Assert_AreEqual(int mosalodneli_atobitshi, string pasuxi_orobitshi)
+    {
+        int sum = mosalodneli_atobitshi;
+
+        string Mosalodneli_orobitishi = "";
+
+
+        while (sum >= 1)
         {
 
-            ans = a;
-       
+            if (sum % 2 == 0)
+            {
+
+                sum = sum / 2;
+                Mosalodneli_orobitishi = "0" + Mosalodneli_orobitishi;
+
+            }
+            else
+            {
+
+                sum = sum / 2;
+                Mosalodneli_orobitishi = "1" + Mosalodneli_orobitishi;
+
+            }
         }
-        else ans = b;
-
-     
-        return ans;
+        string ans = "";
+        
+        if (Mosalodneli_orobitishi == pasuxi_orobitshi)
+        {
+            WriteLine("true");
+        }
+        else
+        {
+            WriteLine("false");
+        }
+        
     }
-
 }
+
+
+
+      
+
+
+
+      
