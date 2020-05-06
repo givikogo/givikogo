@@ -88,8 +88,7 @@ public class Programm
                 Mosalodneli_orobitishi = "1" + Mosalodneli_orobitishi;
 
             }
-        }
-        string ans = "";
+        
         
         if (Mosalodneli_orobitishi == pasuxi_orobitshi)
         {
