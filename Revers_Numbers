@@ -3,8 +3,9 @@ public class Programm
 {
     public static void Main()
     {
+    Console.WriteLine(Revers_AreEqual(1234,Revers(4320)));
+    Console.WriteLine(Revers_AreEqual(1234,Revers(1234)));
     Console.WriteLine(Revers_AreEqual(1327,Revers(7231)));
-        
     }
     
     public static string Revers(int n)//7.2.3.1
@@ -24,31 +25,16 @@ public class Programm
         k = k / 10;
         a += cnt;
       }
-        
         return a;
     }
     
     public static string Revers_AreEqual(int mosalodneli, string pasuxi)
     {
-         int z = 0,cnt = 0;
-       int[] arr = {mosalodneli};
-       string mosalodneli_reverse = "";
-       
-      foreach (int c in arr) 
-      {
-          z = c;
-      }
-      
-      while(z > 0)
-      {
-        cnt = z % 10;
-        z = z / 10;
-        mosalodneli_reverse += cnt;
-      }
-        Console.WriteLine(mosalodneli_reverse);
+        string mosalodnelis = Convert.ToString(mosalodneli);
         Console.WriteLine(pasuxi);
-      
-      if(mosalodneli_reverse != pasuxi)
+        Console.WriteLine(mosalodnelis);
+        
+      if(mosalodnelis == pasuxi)
       {
         return "Revers is Done";  
       }
