@@ -1,0 +1,61 @@
+using System;
+public class Programm
+{
+    public static void Main()
+    {
+    Console.WriteLine(Revers_AreEqual(1327,Revers(7231)));
+        
+    }
+    
+    public static string Revers(int n)//7.2.3.1
+    {
+        int k = 0,cnt = 0;
+       int[] arr = {n};
+       string a = "";
+       
+      foreach (int i in arr) 
+      {
+          k = i;
+      }
+      
+      while(k > 0)
+      {
+        cnt = k % 10;
+        k = k / 10;
+        a += cnt;
+      }
+        
+        return a;
+    }
+    
+    public static string Revers_AreEqual(int mosalodneli, string pasuxi)
+    {
+         int z = 0,cnt = 0;
+       int[] arr = {mosalodneli};
+       string mosalodneli_reverse = "";
+       
+      foreach (int c in arr) 
+      {
+          z = c;
+      }
+      
+      while(z > 0)
+      {
+        cnt = z % 10;
+        z = z / 10;
+        mosalodneli_reverse += cnt;
+      }
+        Console.WriteLine(mosalodneli_reverse);
+        Console.WriteLine(pasuxi);
+      
+      if(mosalodneli_reverse != pasuxi)
+      {
+        return "Revers is Done";  
+      }
+      else
+      {
+        return "Revers is not Done"; 
+      }
+      
+    }
+}
