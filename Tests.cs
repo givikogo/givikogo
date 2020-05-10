@@ -1,79 +1,67 @@
 using System;
-public class Programm
+using static System.Console;        
+
+public class Program
 {
     public static void Main()
     {
-
-        Console.WriteLine(AssertAreEqual(1, Binary(0)));
-        Console.WriteLine(AssertAreEqual(4, Binary(2)));
-        Console.WriteLine(AssertAreEqual(8, Binary(3)));
-    }
-    
-    public static string Binary(int n)
-    {
-        int sum = n;
-        string binary = "";
-        while (sum >= 1)
+        Assert.AreEquals(BinaryNumber(0), 1);
+		Assert.AreEquals(BinaryNumber(2), 4);
+		Assert.AreEquals(BinaryNumber(3), 8);
+		Assert.AreEquals(BinaryNumber(19), 524288);
+		Assert.AreEquals(BinaryNumber(10), 1024);
+    }	
+	                              
+    public static int Poww(int k) 
+	{
+		int ans = 1, n = k;
+		
+        while(n>=1)
         {
-            if (sum % 2 == 0)
-            {
-                sum = sum / 2;
-                binary = "0" + binary;
-            }
-            else
-            {
-                sum = sum / 2;
-                binary = "1" + binary;
-            }
+        n--;
+        ans = ans * 2; 
         }
-        int Nullpluss = 0;
-        int HowNullcnt = n;
-        for (int k = 0; k <= binary.Length; k++)
-        {
-            Nullpluss = HowNullcnt - binary.Length;
-            if (Nullpluss >= 0)
-            {
-                binary = binary + "0";
-            }
-        }
- ///დაბრუნებს a-ს რომელსაც ორობით წარმოდგენაში, k-აურ ადგილზე ექნება 1-იანი დანარჩენი ყველა 0-ები
-        string a = "";
-        a += "1";
-        for (int k = 1; k < n + 1; k++)
-        {
-            a += "0";
-        }
-        return a;
-    }
-    
-    public static bool AssertAreEqual(int x, string y)
-    {
-        int sum = x;
-        string Xbinary = "";
-           
-        while (sum >= 1)
-        {
-            if (sum % 2 == 0)
-            {
-                sum = sum / 2;
-                Xbinary = "0" + Xbinary;
-            }
-            else
-            {
-                sum = sum / 2;
-                Xbinary = "1" + Xbinary;
-            }
-        }
-        bool ans;
         
-        if (Xbinary == y)
-        {
-            ans = true;
-        }
-        else
-        {
-            ans = false;
-        }
-        return ans;
-    }
+		return ans;
+	}
+	
+	public static int BinaryNumber(int k) 
+	{
+	int a = Poww(k);
+	
+		return a;
+	}
+}
+
+public static class Assert
+{
+	public static void AreEquals(int excepted, int actual)
+	{
+		AreEquals(excepted.ToString(), actual.ToString());
+	}
+	
+	public static void AreEquals(string excepted, string actual) 
+	{
+		if (excepted == actual)
+		{
+			WriteLine($@"Result: {true}
+					  
+Excepted: 
+{excepted}
+					  
+Actual:
+{actual}");
+		}
+		else 
+		{
+			WriteLine($@"Result: {false}
+					  
+Excepted: 
+{excepted} 
+					  
+Actual:
+{actual}");
+		}
+		WriteLine();
+	}
 }
