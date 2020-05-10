@@ -62,6 +62,6 @@ Excepted:
 Actual:
 {actual}");
 		}
-		WriteLine ();
+		WriteLine();
 	}
 }
