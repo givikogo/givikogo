@@ -4,36 +4,36 @@ public class Programm
     public static void Main()
     {
 
-        Assert_AreEqual(1, F(0));
-        Assert_AreEqual(4, F(2));
-        Assert_AreEqual(8, F(3));
+        AssertAreEqual(1, Binary(0));
+        AssertAreEqual(4, Binary(2));
+        AssertAreEqual(8, Binary(3));
     }
     
-    public static string F(int n)
+    public static string Binary(int n)
     {
         int sum = n;
-        string orobiti = "";
+        string binary = "";
         while (sum >= 1)
         {
             if (sum % 2 == 0)
             {
                 sum = sum / 2;
-                orobiti = "0" + orobiti;
+                binary = "0" + binary;
             }
             else
             {
                 sum = sum / 2;
-                orobiti = "1" + orobiti;
+                binary = "1" + binary;
             }
         }
         int Nullpluss = 0;
         int HowNullcnt = n;
-        for (int k = 0; k <= orobiti.Length; k++)
+        for (int k = 0; k <= binary.Length; k++)
         {
-            Nullpluss = HowNullcnt - orobiti.Length;
+            Nullpluss = HowNullcnt - binary.Length;
             if (Nullpluss >= 0)
             {
-                orobiti = orobiti + "0";
+                binary = binary + "0";
             }
         }
  ///დაბრუნებს a-ს რომელსაც ორობით წარმოდგენაში, k-აურ ადგილზე ექნება 1-იანი დანარჩენი ყველა 0-ები
@@ -46,26 +46,26 @@ public class Programm
         return a;
     }
     
-    public static void Assert_AreEqual(int mosalodneli_atobitshi, string pasuxi_orobitshi)
+    public static void AssertAreEqual(int x, string y)
     {
-        int sum = mosalodneli_atobitshi;
-        string mosalodneli_orobitishi = "";
+        int sum = x;
+        string Xbinary = "";
            
         while (sum >= 1)
         {
             if (sum % 2 == 0)
             {
                 sum = sum / 2;
-                mosalodneli_orobitishi = "0" + mosalodneli_orobitishi;
+                Xbinary = "0" + Xbinary;
             }
             else
             {
                 sum = sum / 2;
-                mosalodneli_orobitishi = "1" + mosalodneli_orobitishi;
+                Xbinary = "1" + Xbinary;
             }
         }
         
-        if (mosalodneli_orobitishi == pasuxi_orobitshi)
+        if (Xbinary == y)
         {
             Console.WriteLine("true");
         }
