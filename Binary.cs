@@ -12,8 +12,8 @@ public class Program
 		Assert.AreEquals(BinaryNumber(10), 1024);
     }	
 	                              
-public static int Poww(int k) 
-	{
+    public static int Poww(int k) 
+    {
 		int ans = 1, n = k;
 		while(n >= 1)
        	 	{
@@ -21,13 +21,13 @@ public static int Poww(int k)
 			ans = ans * 2; 
         	}
       	return ans;
-	}
+    }
 	
-public static int BinaryNumber(int k) 
-	{
+    public static int BinaryNumber(int k) 
+    {
 		int a = Poww(k);
 	return a;
-	}
+    }
 }
 
 public static class Assert
