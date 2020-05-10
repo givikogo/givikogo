@@ -26,7 +26,7 @@ public static int Poww(int k)
 public static int BinaryNumber(int k) 
 	{
 		int a = Poww(k);
-		return a;
+	return a;
 	}
 }
 
