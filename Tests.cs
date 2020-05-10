@@ -4,9 +4,9 @@ public class Programm
     public static void Main()
     {
 
-        AssertAreEqual(1, Binary(0));
-        AssertAreEqual(4, Binary(2));
-        AssertAreEqual(8, Binary(3));
+        Console.WriteLine(AssertAreEqual(1, Binary(0)));
+        Console.WriteLine(AssertAreEqual(4, Binary(2)));
+        Console.WriteLine(AssertAreEqual(8, Binary(3)));
     }
     
     public static string Binary(int n)
@@ -64,15 +64,16 @@ public class Programm
                 Xbinary = "1" + Xbinary;
             }
         }
+        bool ans;
         
         if (Xbinary == y)
         {
-            return true;
+            ans = true;
         }
         else
         {
-            return false;
+            ans = false;
         }
-        
+        return ans;
     }
 }
