@@ -5,7 +5,7 @@ public class Program
 {
     public static void Main()
     {
-        Assert.AreEquals(BinaryNumber(0), 1);
+        	Assert.AreEquals(BinaryNumber(0), 1);
 		Assert.AreEquals(BinaryNumber(2), 4);
 		Assert.AreEquals(BinaryNumber(3), 8);
 		Assert.AreEquals(BinaryNumber(19), 524288);
@@ -18,8 +18,8 @@ public class Program
 		
         while(n >= 1)
         {
-            n--;
-            ans = ans * 2; 
+         	n--;
+        	ans = ans * 2; 
         }
         
 		return ans;
