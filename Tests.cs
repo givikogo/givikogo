@@ -18,8 +18,8 @@ public class Program
 		
         while(n >= 1)
         {
-        n--;
-        ans = ans * 2; 
+            n--;
+            ans = ans * 2; 
         }
         
 		return ans;
