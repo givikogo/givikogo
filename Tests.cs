@@ -46,7 +46,7 @@ public class Programm
         return a;
     }
     
-    public static void AssertAreEqual(int x, string y)
+    public static bool AssertAreEqual(int x, string y)
     {
         int sum = x;
         string Xbinary = "";
@@ -67,11 +67,11 @@ public class Programm
         
         if (Xbinary == y)
         {
-            Console.WriteLine("true");
+            return true;
         }
         else
         {
-            Console.WriteLine("false");
+            return false;
         }
         
     }
