@@ -1,5 +1,6 @@
 using System;
 using static System.Console;
+
 public class Program
 {
     public static void Main()
@@ -10,23 +11,28 @@ public class Program
         Assert.AreEquals(BinaryNumber(19), 524288);
         Assert.AreEquals(BinaryNumber(10), 1024);
     }
-    public static int Pow(int k, int x = x - 1)
+
+    public static int Poww(int k)
     {
-        int ans = 0, n = k;
+        int ans = 1, n = k;
+
         while (n >= 1)
         {
             n--;
-            ans = k * x;
+            ans = ans * 2;
         }
-        WriteLine(ans);
+
         return ans;
     }
+
+    public static int BinaryNumber(int k)
+    {
+        int a = Poww(k);
+
+        return a;
+    }
 }
-public static int BinaryNumber(int k)
-{
-    int a = 0;
-    return a;
-}
+
 public static class Assert
 {
     public static void AreEquals(int excepted, int actual)
@@ -38,7 +44,7 @@ public static class Assert
     {
         if (excepted == actual)
         {
-            WriteLine(@$"Result: {true}
+            WriteLine($@"Result: {true}
 					  
 Excepted: 
 {excepted}
@@ -48,7 +54,7 @@ Actual:
         }
         else
         {
-            WriteLine(@$"Result: {false}
+            WriteLine($@"Result: {false}
 					  
 Excepted: 
 {excepted} 
